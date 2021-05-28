@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#experienciasfondo{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/fondo-eventos-Web-1500_1500x1000.jpg);
+    /* background-color: rgba(16, 64, 119, 0.616); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: rgba(255, 254, 254, 0.774);
+}
+nav{
+    height: 100%;
+    margin: 0em 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    padding-left: 20px;
+    letter-spacing: 10px;
+}
+
+.carrito{
+
+    font-size: 24px;
+    /*border:1px solid black;*/
+    position: relative;
+    z-index: 0;
+}
+.contador{
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    color: white;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteSubtitulo{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+   
+}
+.experiencias{
+    width: 18%;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    background-color: rgba(0, 128, 128, 0.733);
+    box-shadow: 5px 5px 6px darkgreen;
+    border-radius: 5px 5px 15px 15px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 7px;
+}
+.conteCaja{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 500px;
+    margin-top: 40px;
+}
+
+.izq, .centro{
+    overflow-x: hidden;
+}
+
+.centro{
+    
+    background-color: rgb(235, 235, 245);  
+}
+.izq{
+    width: 35%;
+    position: relative;
+    height: 55vh;
+}
+
+.precio{
+    font-size: 25px;
+    color: white;
+    background-color: tomato;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.imagesAnuncio{
+    width: 100%;
+    height: 100%;
+}
+
+.imagesAnuncio img{
+    width:100%;
+}
+
+.centro{
+    width: 45%;
+}
+.der{
+    width: 15%;
+
+}
+.listadoRutasP{
+font-size: 20px;
+width: 80%;
+background-color: rgba(0, 255, 255, 0.8); 
+box-shadow: 5px 5px 5px darkblue;
+color: black;
+margin-top: 30px; 
+padding-left: 10px;
+cursor: pointer;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+h2{
+    padding-left: 15px;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 25px;
+    padding-top: 20px;
+}
+.centro p{
+font-size: 1.4em;
+padding-left: 60px;
+padding-right: 30px;
+margin-top: 15px;
+text-justify: auto;
+}
+.iconos{
+display: flex;
+justify-content: space-between;
+width: 100%;
+height: 50px;
+/* border: 1px solid gold; */
+margin-top: 5px;
+}
+.cajaIconos{
+    /* border: 1px solid whitesmoke; */
+    /* height: 70px; */
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.cajaIconos i{
+    font-size: 50px;
+    padding-bottom: 15px;
+
+}
+.cajaIconos p{
+    padding-top: 15px;
+}
+.comprar{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    font-size: 2.2em;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-top: 5px double green;
+    border-bottom: 5px double green;
+    background-color: rgba(144, 238, 144, 0.664);
+}
+
+.sumatorio{
+    display: flex;
+    margin-right: 15px;
+}
