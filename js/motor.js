@@ -305,6 +305,8 @@ var listado4=[
     },
 ];
 
+var eleccionDFT=[];
+
 pintar(0);
 
 function pintar(x){
@@ -318,7 +320,7 @@ function pintar(x){
     document.getElementById('centro').innerHTML="";
 
     document.getElementById('centro').innerHTML=`
-        <h2>${turismo[x].nombreruta}</h2>
+        <h2 id="nomrut">${turismo[x].nombreruta}</h2>
         <p>${turismo[x].datos1}</p>
         <p>${turismo[x].datos2}</p>
         <p>${turismo[x].datos3}</p>
@@ -548,3 +550,83 @@ function pintarListado4(x){
         
     `;
 }
+
+function sumar(){
+    let valor = parseInt(document.getElementById(`csm`).innerHTML);
+    valor++;
+    document.getElementById(`csm`).innerHTML=valor;
+}
+
+function restar(){
+    let valor = parseInt(document.getElementById(`csm`).innerHTML);
+    if (valor>1){
+        valor--;
+    }
+    document.getElementById(`csm`).innerHTML=valor;
+}
+
+function addTo() {
+
+    canti=parseInt(document.getElementById(`csm`).innerHTML);
+    precioDT=parseInt(document.getElementById(`precio`).innerHTML);    
+    valorT=(canti*precioDT);
+    fotoDT=document.getElementById(`imagesAnuncio`).innerHTML;
+    
+    
+
+    eleccionDFT.push({
+        
+        cantidad: canti,
+        precio: precioDT,
+        fotoDFT: fotoDT, 
+        total:valorT});
+
+    localStorage.setItem('MysdatosRutas', JSON.stringify(eleccionDFT));
+
+    pintarEleccion();   
+}
+
+function eliminarTarea(posicion){
+    eleccionDFT.splice(posicion,1);
+    localStorage.setItem('MysdatosRutas',JSON.stringify(eleccionDFT));
+    pintarEleccion();
+}
+
+function cargaDatos(){
+    if (localStorage.getItem('MysdatosRutas')){
+
+        eleccionDFT=JSON.parse(localStorage.getItem('MysdatosRutas'));
+        
+        pintarEleccion();
+    }
+}
+
+cargaDatos();
+
+function pintarEleccion(){
+    document.getElementById('pedidos').innerHTML="";
+    var carritoTT=0;
+
+    for(let x=0;x<eleccionDFT.length;x++){
+        
+        document.getElementById('pedidos').innerHTML+=`
+        <div class="vertical">
+            ${eleccionDFT[x].fotoDFT}
+            <div class"minivertical">           
+                <p>Total plazas: ${eleccionDFT[x].cantidad} - Precio por plazas: ${eleccionDFT[x].precio} €</p>        
+                <p>Total: ${eleccionDFT[x].total}€</p>
+
+            </div>
+            <p onclick="eliminarTarea(${x})" class="borrar">X</p>
+        </div>      
+        `;
+
+        carritoTT++
+    }
+
+    document.getElementById('contador').innerHTML=carritoTT;    
+    
+    
+}
+
+

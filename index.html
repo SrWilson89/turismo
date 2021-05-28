@@ -17,8 +17,8 @@
 <header>
     <nav>
         <div class="titulo">Experiencias</div>
-        <div class="carrito" onclick="abrirModal()"><i class="fas fa-shopping-cart"></i><span id="numeroDiscos"></span>
-        <p class="contador">1</p></div>
+        <div class="carrito" ><i class="fas fa-shopping-cart"></i><span id="numeroDiscos"></span>
+        <p class="contador" id="contador">0</p></div>
     </nav>
 </header>
     <div id="contenedor">
@@ -46,13 +46,23 @@
         
         <div class="comprar">
             <div class="sumatorio">
-                <div>-</div>
-                <div><span>0</span></div>
-                <div>+</div>
+                <div onclick="restar()" class="syr">-</div>
+                <div><span id="csm">0</span></div>
+                <div onclick="sumar()" class="syr">+</div>
             </div>
-            <div>Comprar</div>
+            <div onclick="addTo()" class="syr">Comprar</div>
         </div>
     </div>
+
+    <div class="contenedorModal" onclick="">
+        <div id="pedidos">
+
+        </div>
+    </div>
+
+    
+
+    
 
 </section>
 </body>

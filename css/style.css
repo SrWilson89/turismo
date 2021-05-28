@@ -5,7 +5,7 @@
 #experienciasfondo{
     width: 100%;
     height: 100vh;
-    background: url(../images/fondo-eventos-Web-1500_1500x1000.jpg);
+    background: ivory;
     /* background-color: rgba(16, 64, 119, 0.616); */
     background-position: center;
     background-repeat: no-repeat;
@@ -39,6 +39,7 @@ nav{
     position: relative;
     z-index: 0;
 }
+
 .contador{
     font-size: 20px;
     position: absolute;
@@ -189,3 +190,64 @@ margin-top: 5px;
     display: flex;
     margin-right: 15px;
 }
+
+.syr{
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+#csm{
+    padding: 5px 15px;
+}
+
+.contenedorModal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pedidos{
+    height: 70%;
+    width: 70%;
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.vertical{
+    margin-top: 5px;
+    padding: 5px;
+    width: 98%;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: ivory;
+    font-size: 2em;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.vertical img{
+    height: 100%;
+    margin-right: 15px;
+}
+
+.minivertical{    
+    max-width: 80%;         
+}
+
+.borrar{
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
